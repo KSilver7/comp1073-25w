@@ -28,19 +28,25 @@
         // Make an array of the arrays
         let myArrayMaster = [myPersonsArray, myVerbsArray, myAdjectivesArray, myThingsArray, myPlacesArray];
 
-        /* This comment is for myself only, I'll remove it when everything is done.
-        I'm considering doing an array of arrays, but I'm not sure if that will give me
-        the desired result or not. So instead I'll start out with just an array for each section and figure it out as I go */
-
+        // Lets make a loop for the straight forward arrays
+        
+        
         // // Create a random array selector. Should be similar to using the random number generator in the guessing game, except using the length of the array instead of a number
 
         // let i = Math.floor(Math.random() * myPersonsArray.length);
         // // need that to not be a number but rather the array itself
         // let randomArray = myPersonsArray[i];
         // console.log(randomArray);
-        // Now we need a loop to grab a random from each of the arrays in the master array
 
-
+        // Now we need a loop to grab a random variable from each of the arrays in the master array
+        // Since 'i' has been used, we'll use 'j' to represent the random number portion of the loop
+        
+        for (let i = 0; i < myArrayMaster.length; i++) {
+            let j = Math.floor(Math.random() * myArrayMaster[i].length);
+            console.log(myArrayMaster[i][j]);
+        }
+        // Now we need to see that on the page, not just the console
+        
      </script>
      </main>
      <footer>
