@@ -17,6 +17,13 @@
         <h4>YOU have been selected to try out our first text-based version for <em>FREE</em>.</h4>
         <p>Physical story maker books used to be popular... until they started to go off on their own in the middle of the night; this creeped everyone out. To save the fun activies of this book, we've moved to a text based version. Here you can have the same selections as the physical book, without the truamatic experiences of the real book.</p>
         <p>Please be sure to give our product a review in the future. Happy Story making!</p>
+
+        <h2>Make a Story</h2>
+        <button>Random Story</button>
+        <p class="random"></p>
+        <p>Choose which story elements you want</p>
+        <button>My Story</button>
+        <p class="story"></p>
     <!-- Js script here just for now, to be moved later to it's own file-->
      <script>
         // Make an array for each category of words in the book
@@ -25,16 +32,19 @@
         let myAdjectivesArray = ['a funny', 'a scary', 'a goofy', 'a slimy', 'a barking', 'a fat'];
         let myThingsArray = ['goat', 'monkey', 'fish', 'cow', 'frog', 'bug', 'worm'];
         let myPlacesArray = ['on the moon', 'on the chair', 'in my spaghetti', 'in my soup', 'on the grass', 'in my shoes'];
+        // Select the area where we will output the story text
+        const story = document.querySelector('.story');
+        const random = document.querySelector('.random');
+        story.textContent = 'This is your hand made story!';
+        random.textContent = 'This is your random story!';
         // Make an array of the arrays
         let myArrayMaster = [myPersonsArray, myVerbsArray, myAdjectivesArray, myThingsArray, myPlacesArray];
 
-        // Lets make a loop for the straight forward arrays
+        // Since the physical book has the random button first, we'll create that section of the internal code first        
         
-        
-        // // Create a random array selector. Should be similar to using the random number generator in the guessing game, except using the length of the array instead of a number
+        // // Create a random array selector. Should be similar to using the random number generator in the guessing game, except using the .length of the array instead of a number, and gets multipled to the array. This will give us a random set of words from the array
 
         // let i = Math.floor(Math.random() * myPersonsArray.length);
-        // // need that to not be a number but rather the array itself
         // let randomArray = myPersonsArray[i];
         // console.log(randomArray);
 
@@ -46,7 +56,12 @@
             console.log(myArrayMaster[i][j]);
         }
         // Now we need to see that on the page, not just the console
-        
+
+
+        // Lets create the code for the non random button
+        for (let i = 0; i < myArrayMaster.length; i++) {
+                        
+        }
      </script>
      </main>
      <footer>
