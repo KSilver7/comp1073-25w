@@ -22,9 +22,53 @@
         <button ID="rnd">Random Story</button>
         <p class="random"></p>
         <p>Choose which story elements you want</p>
-        <button ID="prs">Person</button> <button ID="vrb">Verb</button> <button ID="adj">Adjective</button> <button ID="thg">Thing</button> <button ID="plc">Place</button>
+        <!-- Make a drop down list to allow the user to choose their story --> 
+        <label for="story">Choose your story elements:</label>
+            <select name="persons" id="persons">
+                <option>The turkey</option>
+                <option>Mom</option>
+                <option>Dad</option>
+                <option>The dog</option>
+                <option>My teacher</option>
+                <option>The elephant</option>
+                <option>The cat</option>
+            </select>
+            <select name="verbs" id="verbs">
+                <option>sat on</option>
+                <option>ate</option>
+                <option>danced with</option>
+                <option>saw</option>
+                <option>doesn't like</option>
+                <option>kissed</option>                
+            </select>
+            <select name="adjectives" id="adjectives">
+                <option>a funny</option>
+                <option>a scary</option>
+                <option>a goofy</option>
+                <option>a slimy</option>
+                <option>a barking</option>
+                <option>a fat</option>                
+            </select>
+            <select name="things" id="things">
+                <option>goat</option>
+                <option>monkey</option>
+                <option>fish</option>
+                <option>cow</option>
+                <option>frog</option>
+                <option>bug</option>
+                <option>worm</option>
+            </select>
+            <select name="places" id="places">
+                <option>on the moon</option>
+                <option>on the chair</option>
+                <option>in my spaghetti</option>
+                <option>in my soup</option>
+                <option>on the grass</option>
+                <option>in my shoes</option>                
+            </select>
+        <!-- <button ID="prs">Person</button> <button ID="vrb">Verb</button> <button ID="adj">Adjective</button> <button ID="thg">Thing</button> <button ID="plc">Place</button> -->
         <br>
-        <button>My Story</button>
+        <button ID="myS">My Story</button>
         <p class="story"></p>
     <!-- Js script here just for now, to be moved later to it's own file-->
      <script>
@@ -68,11 +112,17 @@
                     random.textContent += myArrayMaster[i][j] + ' ';
                 }                
             }
-        });
-        
+        });     
+               
+        // Add an event listener to the My Story button
+        myS.addEventListener('click', function() {
 
-        // Lets create the code for the non random button
-        
+            // Create a variable for the selected option of each dropdown
+            let choice = persons.value + ' ' + verbs.value + ' ' + adjectives.value + ' ' + things.value + ' ' + places.value + '.';
+            story.textContent = 'This is your hand made story: ' + choice;           
+        });
+       
+       
         // for (let i = 0; i < myArrayMaster.length; i++) 
      </script>
      </main>
