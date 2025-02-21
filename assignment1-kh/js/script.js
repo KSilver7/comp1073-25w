@@ -45,6 +45,9 @@ clear.addEventListener('click', function() {
     random.textContent = 'This is your random story: ';
 });
 
+clear2.addEventListener('click', function() {
+    story.textContent = 'This is your hand made story: ';
+});
 // Add an event listener to the My Story button
 myS.addEventListener('click', function() {
 
