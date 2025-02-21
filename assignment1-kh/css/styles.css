@@ -1,6 +1,18 @@
 @charset "utf-8";
-/* */
+/* Added some decoration*/
 html {
     line-height: 1.4;
     font-size: 120%;
+    background-color: rgb(241, 233, 223);
+}
+em {
+    color: rgb(19, 48, 179);
+    font-weight: bold;
+}
+
+.random {
+    border: 2px dashed red;
+}
+.story {
+    border: 2px solid rgb(19, 247, 19);
 }
