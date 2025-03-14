@@ -1,9 +1,60 @@
 const output = document.querySelector('#output');
 
 /* STEP 1: Instead of a constructor function, let's try a JavaScript class called 'Coffee' */
+class Coffee {
+    // Class properties
+    size;
+    isDecaf;
+    // Class constructor
+    constructor(size, isDecaf) {
+        this.size = size;
+        this.isDecaf = isDecaf;
+    };
+    // Class method
+    serveIt() {
+        // create an IMG element
+        const cup = document.createElement("img");
+        // set image path
+        let cupImage = "images/coffee-cup.svg";       
+        // Determine if coffee is decaf
+        let decaf;
+        if(this.isDecaf === true) {
+            // grab the freen coffee cup image instead
+            cupImage = "images/coffee-cup-green.svg";
+            decaf = "decaffeinated";
+        } else {
+            decaf = "caffeinated";
+        }
+        // set src attribute
+        cup.setAttribute("src", cupImage);
+        // set the size of the image according to coffee size
+        let cupSize;
+        switch(this.size) {
+            case "small":
+                cupSize = "100";
+                break;
+            case "medium":
+                cupSize = "125";
+                break;
+            case "large":
+                cupSize = "150";
+                break;
+            case "extralarge":
+                cupSize = "200";
+                break;
+            default:
+                cupSize = "125";
+        };
+        cup.setAttribute("height", cupSize);
 
-/* STEP 2: Instatiate a coffee based on the above constructor function */
-
+        // Insert IMG of coffee cup into page
+        output.appendChild(cup);
+    };
+};
+/* STEP 2: Instantiate a coffee based on the above constructor function */
+let scottsCoffee = new Coffee("large", true);
+let karensCoffee = new Coffee("extralarge", false);
+let stevesCoffee = new Coffee("small", false);
 /* STEP 3: Add a method to the Coffee class called serveIt() */
 
 /* STEP 4: Call up the serveIt() method */
