@@ -50,7 +50,7 @@ function showTopFlavors(jsonObj) {
         // STEP 10g: Build a loop for the ingredients array in the JSON
         let ingredients = topFlavors[i]["ingredients"];
         for (let j = 0; j < ingredients.length; j ++) {
-            let li = document.createElement("li");
+            let listItem = document.createElement("li");
             listItem.textContent = ingredients[j];
             // add the ingredient to the UL
             ul.appendChild(listItem);
