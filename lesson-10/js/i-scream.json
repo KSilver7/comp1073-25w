@@ -26,5 +26,34 @@
       ],
       "image" : "peach-mango.svg"
     }
+    {
+      "name" : "French Vanilla Bubblegum",
+      "calories" : 600,
+      "type" : "ice cream",
+      "ingredients" : [
+        "french vanilla cream",
+        "bubblegum flavoured balls",
+        "vanilla extract",
+        "sugar",
+        "whole milk",
+        "heavy cream"
+      ],
+      "image" : "ice-cream-xtra1.svg"
+    },
+    {
+      "name" : "Cookies 'N Cream",
+      "calories" : 550,
+      "type" : "frozen yogurt",
+      "ingredients" : [
+        "yogurt",
+        "oreo cookie pieces",
+        "clover honey",
+        "whole milk",
+        "heavy cream",
+        "vanilla extract",
+        "granulated sugar"
+      ],
+      "image" : "ice-cream-xtra2.svg"
+    }
   ]
 }
