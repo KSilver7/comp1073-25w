@@ -19,7 +19,24 @@
         <h3>Welcome to the automatic <em>Smoothie Machine</em>!</h3>
         <p>Simpley choose your options below and your smoothie will be custom made within seconds!</p>
         <form>
-            <fieldset>
+            <fieldset class="smoothie-size">
+                <legend>Choose your size</legend>
+                
+                <!-- Radio buttons to make sure only 1 size is selected. Small option-->
+                <input type="radio" id="small" name="size" value="small">
+                <label for="small">Small</label>
+                <!-- Medium option. Added checked to make this the default option -->
+                <input type="radio" id="medium" name="size" value="medium" checked>
+                <label for="medium">Medium</label>
+                <!-- Large option-->
+                <input type="radio" id="large" name="size" value="large">
+                <label for="large">Large</label>
+                <!-- Extra Large-->
+                 <input type="radio" id="extra-large" name="size" value="extra-large">
+                 <label for="extra-large">Extra Large</label>
+                
+            </fieldset>
+            <fieldset class="smoothie-base">
                 <legend>Choose your base</legend>
                 <label for="base">BASE:</label>
                 <select id="base" name="base" required>
@@ -36,9 +53,15 @@
                     <option value="soymilk">Soy Milk</option>
                 </select>
             </fieldset>
-            <fieldset>
+            <fieldset class="smoothie-ingredients">
+                <legend>Choose your ingredients</legend>
+
 
             </fieldset>
+                <div>
+                    <button class="btn">Submit</button>
+                </div>
+            
         </form>
         <!-- This is where the output will be-->
         <p id="output"></p>
