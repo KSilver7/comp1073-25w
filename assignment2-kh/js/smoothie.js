@@ -18,7 +18,14 @@ class Smoothie {
         // make an img element
         const beverage = document.createElement("img");
         // put the image path
-        let beverageImage = "";
+        let beverageImage = "images/smoothie-purp.svg";
+        // Figure out what base is used
+        let smoothieBase;
         
+        if (this.base === "water" || this.base === "ice" || this.base === "coconut-water") {
+            // grab the water based smoothie image instead
+            beverageImage = "images/smoothie-blue.svg";
+        }
+
     }
 };
