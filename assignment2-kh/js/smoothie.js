@@ -1,5 +1,6 @@
 const output = document.querySelector('#output');
 /* set the const output to select the output id set in the <p> on the html*/
+const btn = document.querySelector('button');
 
 /* Create a class 'Smoothie */
 class Smoothie {
@@ -67,3 +68,15 @@ class Smoothie {
         output.appendChild(beverage);
     };
 };
+// add event listener for the button
+btn.addEventListener("click", function() {    
+    // get the size, then base, then ingredients in an array
+    // used .value in hopes of it pulling the right valuefrom the form
+    const size = document.querySelector("#size").value; 
+    const base = document.querySelector("#base").value;
+    // this should use the comma as a delimiter and break the string down
+    const ingredients = document.querySelector("#ingredients").value.split(",");
+    const smoothie = new Smoothie(size, base, ingredients);
+    // mix it should make it now if we call it
+    smoothie.mixIt();
+});
