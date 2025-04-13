@@ -42,3 +42,41 @@ to do a calculation with the .length property (or count out the index placing yo
 
 // STEP: 3 When would the charAt() method be used?
 
+/* - Any time you have a string and wish to either retireve a single character from a specific index 
+position, like the first letter, the last letter or the 3rd letter in, this is when you would use the
+charAt() method.
+ -It can be used in more complex ways too like in a loop to go through a string bringing back each letter one at a time.
+ -Perhaps you want to use it in combination with another method like indexOf() to find the first letter of 
+a word that starts with a certain letter.
+ -It could also be used in a loop with another variable like reverse to itterate through a string and return the
+letters in reverse order.
+
+Or in a better summarized saying, it's like this quote here:
+"It is frequently utilized in data validation, parsing, and formatting tasks where precise string manipulation is required."
+Quote from https://docs.vultr.com/javascript/standard-library/String/charAt  retrieved on (Apr. 12, 2025).
+ */
+
+// STEP: 4 Where would the charAt() method be used?
+/* In a broader sence of the question, the charAt() method, because it's part of the JS language, can be used
+in any JS environment. More directly, the charAt() method can be called on a string variable
+(add .charAt() to the end of a string variable) or a string literal(a string in quotes) */
+
+// STEP: 5a How would the charAt() method be used?
+// Let's create some examples of how to use the charAt() method.
+
+// STEP: 5b Use the charAt() method on a string variable
+
+
+/* These examples are a little more complex. We'll use the output to the HTML output to see
+how these would show up on a webpage.*/
+let string1 = "Goodbye Winter!";
+let fLetter = string1.charAt(0);
+// console.log(`The first letter of the string is: ${fLetter}`);
+let lLetter = string1.charAt(string1.length - 1);
+// console.log(`The last letter of the string is: ${lLetter}`);
+let letter4 = string1.charAt(3);
+// console.log(`The fourth letter of the string is: ${letter4}`);
+// if you try to get a letter that is out of scope, like letter 99 in this string,
+// it will return an empty string.
+let letter99 = string1.charAt(99);
+// console.log(`The letter at index 99 is out of scope and returns this empty string: ${letter99}`);
