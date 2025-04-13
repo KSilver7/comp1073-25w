@@ -64,8 +64,18 @@ in any JS environment. More directly, the charAt() method can be called on a str
 // STEP: 5a How would the charAt() method be used?
 // Let's create some examples of how to use the charAt() method.
 
-// STEP: 5b Use the charAt() method on a string variable
+// STEP: 5b Use the charAt() method.
 
+// Here is an example of the charAt() method on a string literal.
+// console.log("Mango".charAt(0));
+/* This outputs "M".
+Take note that this was a string literal. We gave it string without creating a variable.*/
+
+// Here is an example of the charAt() method on a string variable.
+let fruitName = "Mango";
+// console.log(fruitName.charAt(0));
+/* This outpus "M" as well.
+This time, we used a variable which holds the string instead of using the string directly. */
 
 /* These examples are a little more complex. We'll use the output to the HTML output to see
 how these would show up on a webpage.*/
@@ -80,3 +90,13 @@ let letter4 = string1.charAt(3);
 // it will return an empty string.
 let letter99 = string1.charAt(99);
 // console.log(`The letter at index 99 is out of scope and returns this empty string: ${letter99}`);
+
+// Lets use a for loop to iterate through the string and return each individual letter.
+let str = "Georgian"; // This is the string we'll be using.
+let result = ""; // Here we want to start with an empty string to build on.
+for (let i = 0; i < str.length; i++) {
+    result += str.charAt(i); // This adds the letter at the index of i to the result string.
+}
+// console.log(result);
+/* This outputs "Georgian" */
+
