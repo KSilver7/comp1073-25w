@@ -77,7 +77,7 @@ let fruitName = "Mango";
 /* This outpus "M" as well.
 This time, we used a variable which holds the string instead of using the string directly. */
 
-/* These examples are a little more complex. We'll use the output to the HTML output to see
+/* These examples are a little more complex. We'll use the console.log() to output the result to our HTML page, to see
 how these would show up on a webpage.*/
 let string1 = "Goodbye Winter!";
 let fLetter = string1.charAt(0);
@@ -99,4 +99,6 @@ for (let i = 0; i < str.length; i++) {
 }
 // console.log(result);
 /* This outputs "Georgian" */
+
+
 
