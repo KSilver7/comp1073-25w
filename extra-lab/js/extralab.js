@@ -81,15 +81,15 @@ This time, we used a variable which holds the string instead of using the string
 how these would show up on a webpage.*/
 let string1 = "Goodbye Winter!";
 let fLetter = string1.charAt(0);
-// console.log(`The first letter of the string is: ${fLetter}`);
+// output.textContent = `The first letter of the string is: ${fLetter}`;
 let lLetter = string1.charAt(string1.length - 1);
-// console.log(`The last letter of the string is: ${lLetter}`);
+// output.textContent = `The last character of the string is: ${lLetter}`;
 let letter4 = string1.charAt(3);
-// console.log(`The fourth letter of the string is: ${letter4}`);
+// output.textContent = `The fourth letter of the string is: ${letter4}`;
 // if you try to get a letter that is out of scope, like letter 99 in this string,
 // it will return an empty string.
 let letter99 = string1.charAt(99);
-// console.log(`The letter at index 99 is out of scope and returns this empty string: ${letter99}`);
+// output.textContent = `The letter at index 99 is out of scope and returns this empty string: ${letter99}`;
 
 // Lets use a for loop to iterate through the string and return each individual letter.
 let str = "Georgian"; // This is the string we'll be using.
@@ -97,7 +97,7 @@ let result = ""; // Here we want to start with an empty string to build on.
 for (let i = 0; i < str.length; i++) {
     result += str.charAt(i); // This adds the letter at the index of i to the result string.
 }
-// console.log(result);
+// output.textContent = result;
 /* This outputs "Georgian" */
 
 
