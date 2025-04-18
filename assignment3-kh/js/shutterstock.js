@@ -31,35 +31,41 @@ function fetchResults(event) {
     });
 };
 
-function displayResults(images) {
+function displayResults(data) {
+    
+    const imgCont = document.getElementById('imgRes');
     // clear out the old results here
-    while (section.firstChild) {
-        section.removeChild(section.firstChild);
-    };
-    // if there isn't an image, give an error msg as a little paragraph
-    if (!images) {
+    imgCont.innerHTML = '';
+   
+    if (data && data.length > 0) {
+        // if its not empty loop and get the images
+        data.forEach(image => {
+            const imgCont = document.createElement('div');
+            imgCont.classList.add('image-container');
+            const img = document.createElement('img');
+            img.src = image.assets.preview.url;
+            img.alt = image.description;
+
+            // description for the image
+            const desc = document.createElement('p');
+            desc.textContent = image.description;
+
+            // put the image in the div container
+            imgCont.appendChild(img);
+            // put the description inside the paragraph
+            imgCont.appendChild(desc);
+            // put them both together in the main container
+            section.appendChild(imgCont);
+
+        })
         const paragraph = document.createElement('p');
         paragraph.textContent = 'No images were found.';
         section.appendChild(paragraph);
         // else if image is found, do a for each loop and attach the image to the section
-    } else if (images.length > 0) {
-        images.forEach(image => {
-            // container for the img
-            const article = document.createElement('article');
-            // image itself
-            const img = document.createElement('img');
-            // description for the image
-            const caption = document.createElement('p');
+    } else if () {
+       
 
-            img.src = image.assets.preview.url;
-            img.alt = image.description;
-            caption.textContent = image.description;
-            article.appendChild(img);
-            article.appendChild(caption);
-            // put the article in the page
-            section.appendChild(article);
-
-        });
+        };
     } else {
         // just in case there's no image, add an error message
         const paragraph = document.createElement('p');
