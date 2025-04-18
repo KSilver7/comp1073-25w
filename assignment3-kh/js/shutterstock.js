@@ -43,8 +43,15 @@ function displayResults(data) {
             const imgCont = document.createElement('div');
             imgCont.classList.add('image-container');
             const img = document.createElement('img');
-            img.src = image.assets.preview.url;
             img.alt = image.description;
+
+            // here we add in what type of image we can get back from the API -- photo or vector
+            if (image.image_type === 'photo') {
+                img.src = image.assets.preview.url;
+            }
+            else if (image.image_type === 'vector') {
+                img.src = image.assets.preview.url;
+            }
 
             // description for the image
             const desc = document.createElement('p');
@@ -55,21 +62,14 @@ function displayResults(data) {
             // put the description inside the paragraph
             imgCont.appendChild(desc);
             // put them both together in the main container
-            section.appendChild(imgCont);
+            imgRes.appendChild(imgCont);
 
-        })
-        const paragraph = document.createElement('p');
-        paragraph.textContent = 'No images were found.';
-        section.appendChild(paragraph);
-        // else if image is found, do a for each loop and attach the image to the section
-    } else if () {
-       
-
-        };
+        });
+   
     } else {
         // just in case there's no image, add an error message
-        const paragraph = document.createElement('p');
-        paragraph.textContent = 'No images were found.';
-        section.appendChild(paragraph);
+        const noRes = document.createElement('p');
+        noRes.textContent = 'No images were found.';
+        imgRes.appendChild(noRes);
     };
 };
