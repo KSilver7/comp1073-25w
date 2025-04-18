@@ -35,7 +35,7 @@ function displayResults(data) {
     
     const imgRes = document.getElementById('image-results');
     // clear out the old results here
-    imgCont.innerHTML = '';
+    imgRes.innerHTML = '';
    
     if (data && data.length > 0) {
         // if its not empty loop and get the images
