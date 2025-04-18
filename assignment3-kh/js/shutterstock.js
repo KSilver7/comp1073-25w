@@ -16,7 +16,7 @@ function fetchResults(event) {
     // prevent default to stop the form submitting
     event.preventDefault();
     // assemble the full URL
-    url = `${baseURL}?query=${searchTerm.value}`;
+    url = `${baseURL}?query=${searchTerm.value}&per_page=10`;
     // shutterstock requires that we add the headers to the request
     const headers = {
         "User-Agent": "COMP1073/1.0",
@@ -31,7 +31,7 @@ function fetchResults(event) {
         return result.json();
     })
     .then(json => {
-        displayResults(json);
+        displayResults(json.data);
     });
 };
 
