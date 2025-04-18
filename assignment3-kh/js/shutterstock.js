@@ -19,7 +19,7 @@ function fetchResults(event) {
     url = `${baseURL}?query=${searchTerm.value}`;
     // shutterstock requires that we add the headers to the request
     const headers = {
-        "User-Agent": "COMP1073/1.0"
+        "User-Agent": "COMP1073/1.0",
         // this should tell it what kind of authorization we need for the api request
         "Authorization": `Bearer ${key}`
     };
