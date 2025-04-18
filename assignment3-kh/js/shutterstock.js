@@ -16,15 +16,18 @@ function fetchResults(event) {
     // prevent default to stop the form submitting
     event.preventDefault();
     // assemble the full URL
-    url = `${baseURL}?api_key=${key}&query=${searchTerm.value}`;
+    url = `${baseURL}?query=${searchTerm.value}`;
     // shutterstock requires that we add the headers to the request
     const headers = {
         "User-Agent": "COMP1073/1.0"
+        // this should tell it what kind of authorization we need for the api request
+        "Authorization": `Bearer ${key}`
     };
     console.log(url);
 
     // use fetch() to pass the URL to the API service, and then pass the JSON to the displayResults().
-    fetch(url).then(result => {
+    fetch(url, {headers: headers})
+    .then(result => {
         return result.json();
     }).then(json => {
         displayResults(json);
