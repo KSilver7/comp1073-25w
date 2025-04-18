@@ -36,7 +36,6 @@ function displayResults(images) {
     while (section.firstChild) {
         section.removeChild(section.firstChild);
     };
-    let articles = json.response.docs;
     // if there isn't an image, give an error msg as a little paragraph
     if (!images) {
         const paragraph = document.createElement('p');
