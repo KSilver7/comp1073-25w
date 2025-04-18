@@ -16,7 +16,7 @@ function fetchResults(event) {
     // prevent default to stop the form submitting
     event.preventDefault();
     // assemble the full URL
-    url = `${baseURL}?apikey=${key}&query=${searchTerm.value}`;
+    url = `${baseURL}?api_key=${key}&query=${searchTerm.value}`;
     // shutterstock requires that we add the headers to the request
     const headers = {
         "User-Agent": "COMP1073/1.0"
