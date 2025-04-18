@@ -21,15 +21,16 @@ function fetchResults(event) {
     const headers = {
         "User-Agent": "COMP1073/1.0",
         // this should tell it what kind of authorization we need for the api request
-        "Authorization": `Bearer ${key}`
+        "Authorization": `Bearer v2/TUZjVXJ0TmlBSEdORzlUQUR0anhBSEE2QURPVlRQU1cvNDY1MDQzODU3L2N1c3RvbWVyLzQvcEVIalV2MTdCWUg0UE1GUUZmTl8yTEF3RmlsLVNtejJuNHVVTnVkR0lLMmFOc3Rrdl8zMWFwejZ1WnY0TUIxTVJCZ3lWVkdBTzBlT1NTQmwzUG8tVEdNRmRmNnlOZ3pQMUtjUW16VEY5TzhFZkFEc2pjUEU2d05QVE9aWXlhV1FnUmdEb0g5eW1UR0dSZGp4RUREeGNuTFRTdk9oTzdfMFlteWR4aXg4anpkenRuMl9vN0hNN2R6WVJCb0lfbHJyNXZRUi1wMUljVzk4RGtOeERWWER5US9CZ3NUVGNnVGpfNU4zX3RKZllSWG5B`
     };
     console.log(url);
 
     // use fetch() to pass the URL to the API service, and then pass the JSON to the displayResults().
-    fetch(url, {headers: headers})
+    fetch(url, { headers: headers })
     .then(result => {
         return result.json();
-    }).then(json => {
+    })
+    .then(json => {
         displayResults(json);
     });
 };
