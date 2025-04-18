@@ -33,7 +33,7 @@ function fetchResults(event) {
 
 function displayResults(data) {
     
-    const imgCont = document.getElementById('imgRes');
+    const imgRes = document.getElementById('image-results');
     // clear out the old results here
     imgCont.innerHTML = '';
    
